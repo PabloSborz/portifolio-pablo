@@ -1,0 +1,123 @@
+:host {
+  display: block;
+}
+
+.projects-page {
+  width: min(1180px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 70px 0 90px;
+}
+
+.projects-heading {
+  max-width: 620px;
+}
+
+.eyebrow,
+.project-status {
+  margin: 0 0 10px;
+  color: #9365f7;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.introduction {
+  margin: 25px 0 0;
+  color: #aaa6b2;
+  line-height: 1.8;
+}
+
+.projects-grid {
+  display: grid;
+  margin-top: 58px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.project-card {
+  position: relative;
+  display: flex;
+  min-height: 260px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  overflow: hidden;
+  align-items: flex-end;
+  background:
+    radial-gradient(circle at 80% 10%, rgba(122, 63, 232, 0.28), transparent 45%),
+    #0d0c11;
+}
+
+.project-card::after {
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 210px;
+  height: 210px;
+  border: 1px solid rgba(147, 101, 247, 0.25);
+  border-radius: 50%;
+  content: "";
+}
+
+.project-number {
+  position: absolute;
+  top: 26px;
+  left: 30px;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.project-card h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.project-card p:last-child {
+  max-width: 380px;
+  margin: 12px 0 0;
+  color: #8f8b97;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .projects-page {
+    width: min(100% - 36px, 1180px);
+    padding: 55px 0 70px;
+  }
+
+  .projects-grid {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 420px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .project-card {
+    min-height: 230px;
+    padding: 26px;
+  }
+
+  .project-number {
+    top: 22px;
+    left: 25px;
+  }
+}

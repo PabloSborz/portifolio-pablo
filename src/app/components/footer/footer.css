@@ -1,0 +1,39 @@
+.site-footer {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  width: min(1180px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 8px 0 34px;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.site-footer a {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #e8e5ed;
+  place-items: center;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.site-footer a:hover {
+  color: #9d74f6;
+  transform: translateY(-2px);
+}
+
+.site-footer svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+@media (max-width: 640px) {
+  .site-footer {
+    width: min(100% - 36px, 1180px);
+    padding-bottom: 24px;
+  }
+}

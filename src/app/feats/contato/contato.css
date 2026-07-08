@@ -1,0 +1,265 @@
+:host {
+  display: block;
+}
+
+.contact-page {
+  display: grid;
+  width: min(1180px, calc(100% - 64px));
+  min-height: 570px;
+  margin: 0 auto;
+  padding: 55px 0 90px;
+  grid-template-columns: minmax(360px, 0.92fr) minmax(390px, 0.78fr);
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(60px, 10vw, 140px);
+}
+
+.contact-intro {
+  max-width: 650px;
+}
+
+.eyebrow,
+.panel-label {
+  margin: 0 0 13px;
+  color: #9365f7;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(3.1rem, 6vw, 5.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.058em;
+}
+
+h1 span {
+  display: block;
+  color: #9365f7;
+}
+
+.introduction {
+  max-width: 565px;
+  margin: 29px 0 0;
+  color: #aaa6b2;
+  font-size: 0.97rem;
+  line-height: 1.8;
+}
+
+.availability {
+  display: flex;
+  margin-top: 38px;
+  align-items: center;
+  gap: 14px;
+}
+
+.status-dot {
+  position: relative;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #68d391;
+  box-shadow: 0 0 18px rgba(104, 211, 145, 0.65);
+}
+
+.status-dot::after {
+  position: absolute;
+  inset: -5px;
+  border: 1px solid rgba(104, 211, 145, 0.25);
+  border-radius: 50%;
+  content: "";
+}
+
+.availability strong {
+  display: block;
+  color: #ece9f0;
+  font-size: 0.85rem;
+}
+
+.availability p {
+  margin: 4px 0 0;
+  color: #77737f;
+  font-size: 0.75rem;
+}
+
+.contact-panel {
+  position: relative;
+  padding: 1px;
+  border-radius: 27px;
+  overflow: hidden;
+  background: linear-gradient(145deg, rgba(153, 106, 247, 0.48), rgba(255, 255, 255, 0.05) 40%, rgba(255, 255, 255, 0.02));
+  box-shadow: 0 28px 85px rgba(0, 0, 0, 0.38);
+}
+
+.contact-panel::before {
+  position: absolute;
+  top: -120px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(114, 55, 225, 0.18);
+  content: "";
+  filter: blur(50px);
+}
+
+.panel-content {
+  position: relative;
+  z-index: 2;
+  padding: clamp(25px, 4vw, 38px);
+  border-radius: 26px;
+  background: rgba(11, 10, 15, 0.94);
+}
+
+.orbit {
+  position: absolute;
+  z-index: 1;
+  border: 1px solid rgba(147, 101, 247, 0.2);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.orbit-large {
+  top: -75px;
+  right: -70px;
+  width: 230px;
+  height: 230px;
+}
+
+.orbit-small {
+  top: -35px;
+  right: -25px;
+  width: 140px;
+  height: 140px;
+}
+
+.panel-label {
+  margin-bottom: 22px;
+  color: #8f8a98;
+}
+
+.contact-list {
+  display: grid;
+  gap: 11px;
+}
+
+.contact-list a {
+  display: grid;
+  min-height: 78px;
+  padding: 13px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 15px;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.025);
+  text-decoration: none;
+  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.contact-list a:hover {
+  border-color: rgba(147, 101, 247, 0.38);
+  background: rgba(122, 63, 232, 0.09);
+  transform: translateX(4px);
+}
+
+.icon-box {
+  display: grid;
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgba(147, 101, 247, 0.18);
+  border-radius: 12px;
+  background: rgba(122, 63, 232, 0.1);
+  color: #a781f7;
+  place-items: center;
+}
+
+.icon-box svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.contact-info small {
+  display: block;
+  margin-bottom: 4px;
+  color: #74707b;
+  font-size: 0.68rem;
+}
+
+.contact-info strong {
+  color: #efecf3;
+  font-size: 0.93rem;
+}
+
+.arrow {
+  color: #77727f;
+  font-size: 1.1rem;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.contact-list a:hover .arrow {
+  color: #a781f7;
+  transform: translate(2px, -2px);
+}
+
+.response-note {
+  margin: 20px 0 0;
+  color: #66616d;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+@media (max-width: 850px) {
+  .contact-page {
+    grid-template-columns: 1fr 0.85fr;
+    gap: 45px;
+  }
+}
+
+@media (max-width: 760px) {
+  .contact-page {
+    width: min(100% - 36px, 1180px);
+    padding: 45px 0 70px;
+    grid-template-columns: 1fr;
+  }
+
+  .contact-intro {
+    max-width: 600px;
+  }
+
+  .contact-panel {
+    width: min(100%, 520px);
+  }
+}
+
+@media (max-width: 420px) {
+  .contact-page {
+    gap: 38px;
+  }
+
+  .panel-content {
+    padding: 18px;
+  }
+
+  .contact-list a {
+    padding: 11px;
+    gap: 11px;
+  }
+
+  h1 {
+    font-size: 2.75rem;
+  }
+
+  .introduction {
+    font-size: 0.9rem;
+  }
+
+  .icon-box {
+    width: 42px;
+    height: 42px;
+  }
+}
